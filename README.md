@@ -63,7 +63,7 @@ Este repositorio contiene **el código que produjo cada número del reporte**. N
 
 ## Uso de inteligencia artificial
 
-Proyecto individual. El código y el reporte HTML se escribieron con Claude (Anthropic), que nunca tuvo acceso a los datos. Yo corrí cada celda en mi Colab, revisé cada resultado y tomé las decisiones de método y de criterio futbolístico, registradas con fecha en la bitácora del proyecto (disponible si el jurado la pide). Entre ellas:
+Proyecto individual. El código y el reporte HTML se escribieron con Claude (Anthropic), que nunca tuvo acceso a los datos. Yo corrí cada celda en mi Colab, revisé cada resultado y tomé las decisiones de método y de criterio futbolístico, registradas con fecha en la bitácora del proyecto. Entre ellas:
 
 - el principio que guía el reporte: los datos informan y el criterio futbolístico decide;
 - elegir técnico con perfiles anónimos, para que la fama no pese en la decisión;
