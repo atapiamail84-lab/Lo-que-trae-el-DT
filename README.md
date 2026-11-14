@@ -1,12 +1,13 @@
 # Lo que trae el técnico
 
 **Hackathon ISAC 2026 · Club América, pista 2: "La historia de un entrenador a través de los datos".**
-Participación individual: Arturo (Universidad Panamericana).
+Participación individual: Arturo Tapia (Universidad Panamericana). Proyecto finalista.
 
 ¿Qué compra un club cuando contrata un técnico? Con cinco temporadas de eventos StatsBomb 360 de la Liga MX medimos 85 rasgos de estilo y comparamos a técnicos que cambiaron de club con clubes que cambiaron de técnico. El hallazgo central es que el técnico decide cómo juega el equipo y quién juega decide cuánto le rinde. Una prueba en vivo con Guillermo Almada en el América, con predicciones congeladas antes de ver sus partidos, cumplió las cuatro predicciones.
 
-- **Reporte interactivo:** https://atapiamail84-lab.github.io/Lo-que-trae-el-DT/reporte/ (el archivo está en `reporte/index.html`)
-- **Video (5 min):** _(enlace en el formulario de entrega)_
+- **Reporte interactivo (versión 2, 14-nov-2026):** https://atapiamail84-lab.github.io/Lo-que-trae-el-DT/reporte/ (el archivo está en `reporte/index.html`)
+
+La versión 2 amplía la ficha de técnico de 10 a las 87 etapas de 15 partidos o más (62 técnicos, 18 clubes). Usa las mismas celdas y las mismas definiciones; las cifras de la versión entregada al jurado el 22-oct-2026 no cambian. Esa versión queda en el historial de este repositorio.
 
 Este repositorio contiene **el código que produjo cada número del reporte**. No contiene datos: las reglas del reto prohíben publicarlos.
 
@@ -16,10 +17,10 @@ Este repositorio contiene **el código que produjo cada número del reporte**. N
 
 | Ruta | Qué es |
 |---|---|
-| `cuadernos/1_analisis_completo.ipynb` | Todo el análisis en orden de ejecución, de la descarga de datos a las tablas del reporte (147 celdas). Sin salidas. |
-| `cuadernos/2_fase_final.ipynb` | La fase final: prueba en vivo de Almada (E, X6, V-1) y exportación al reporte (G-0 a G-10), 35 celdas. Conserva las salidas de G-8, G-9, G-10 y G-9b. |
-| `reporte/index.html` | El reporte interactivo (versión entregada el 22-oct-2026). Se ve publicado en el enlace de arriba. |
-| `docs/preregistro_almada.md` | Las cuatro predicciones sobre Almada, congeladas el 18-oct-2026 a las 23:58, con sus aclaraciones fechadas y el resultado. |
+| `Cuadernos/1_analisis_completo.ipynb` | Todo el análisis en orden de ejecución, de la descarga de datos a las tablas del reporte (147 celdas). Sin salidas. |
+| `Cuadernos/2_fase_final.ipynb` | La fase final: prueba en vivo de Almada (E, X6, V-1) y exportación al reporte (G-0 a G-10), 35 celdas. Conserva las salidas de G-8, G-9, G-10 y G-9b. |
+| `reporte/index.html` | El reporte interactivo, versión 2 (14-nov-2026). Se ve publicado en el enlace de arriba. |
+| `Docs/preregistro_almada.md` | Las cuatro predicciones sobre Almada, congeladas el 18-oct-2026 a las 23:58, con sus aclaraciones fechadas y el resultado. |
 
 ## Cómo se ejecutó
 
@@ -43,7 +44,7 @@ Este repositorio contiene **el código que produjo cada número del reporte**. N
 | Mapa de dueños y compatibilidad | C-0, C-1, C-1b, C-2, C-3, F-1, F-2 | Mapa de dos ejes con placebo, compatibilidad técnico-club, ensayo en 27 llegadas |
 | Pruebas complementarias | R8h, K1, K1b, D1, D1b, L1, A1, A2, M1, B7 | Emparejamiento aéreo, concordancia con StatsBomb, duración de etapas, territorio por titular fuera |
 | Prueba en vivo (Almada) | E-00 a E-5, X6-*, V-1 | Re-descarga con corte 19-oct, reajuste completo, validación contra lo previo y evaluación literal del preregistro |
-| Reporte | G-0 a G-10 | Exportación de agregados al reporte |
+| Reporte | G-0 a G-10 | Exportación de agregados al reporte. En la versión 2, las mismas celdas se corrieron sobre todas las etapas de 15 partidos o más; las 10 etapas de la entrega se recalcularon y coinciden con lo publicado |
 
 ### Qué celda sostiene cada sección del reporte
 
