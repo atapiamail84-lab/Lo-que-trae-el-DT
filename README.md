@@ -3,11 +3,13 @@
 **Hackathon ISAC 2026 · Club América, pista 2: "La historia de un entrenador a través de los datos".**
 Participación individual: Arturo Tapia (Universidad Panamericana). Proyecto finalista.
 
-¿Qué compra un club cuando contrata un técnico? Con cinco temporadas de eventos StatsBomb 360 de la Liga MX medimos 85 rasgos de estilo y comparamos a técnicos que cambiaron de club con clubes que cambiaron de técnico. El hallazgo central es que el técnico decide cómo juega el equipo y quién juega decide cuánto le rinde. Una prueba en vivo con Guillermo Almada en el América, con predicciones congeladas antes de ver sus partidos, cumplió las cuatro predicciones.
+¿Qué compra un club cuando contrata un técnico? Con cinco temporadas de eventos StatsBomb 360 de la Liga MX medimos 85 rasgos de estilo y comparamos a técnicos que cambiaron de club con clubes que cambiaron de técnico. El hallazgo central es que el técnico decide cómo juega el equipo y quién juega decide cuánto le rinde. De ahí salen dos métricas propias: **xShift**, hacia dónde y cuánto jala un técnico al equipo en cada rasgo que viaja con él, y **xRead**, desde qué partido se puede medir con confianza cada rasgo. Una prueba en vivo con Guillermo Almada en el América, con predicciones congeladas antes de ver sus partidos, cumplió las cuatro predicciones.
 
-- **Reporte interactivo (versión 2, 14-nov-2026):** https://atapiamail84-lab.github.io/Lo-que-trae-el-DT/reporte/ (el archivo está en `reporte/index.html`)
+- **Reporte interactivo (versión 2.1, 18-nov-2026):** https://atapiamail84-lab.github.io/Lo-que-trae-el-DT/reporte/ (el archivo está en `reporte/index.html`)
 
 La versión 2 amplía la ficha de técnico de 10 a las 87 etapas de 15 partidos o más (62 técnicos, 18 clubes). Usa las mismas celdas y las mismas definiciones; las cifras de la versión entregada al jurado el 22-oct-2026 no cambian. Esa versión queda en el historial de este repositorio.
+
+La versión 2.1 lleva al reporte las dos métricas que presentamos en la final, xShift y xRead: un bloque en el resumen con el xShift de cualquier técnico en un vistazo, el mapa xShift + xRead en la ficha de las 24 etapas cuyo técnico tuvo una etapa previa en la liga, el mapa de Almada en la prueba en vivo y su definición en "Cómo lo medimos". No agrega cálculos nuevos sobre los datos: xShift se calcula en el navegador con los perfiles de etapa que el reporte ya traía y xRead es el número de partidos que la versión 2 llamaba "reloj de medición". Ninguna cifra anterior cambia.
 
 Este repositorio contiene **el código que produjo cada número del reporte**. No contiene datos: las reglas del reto prohíben publicarlos.
 
@@ -19,8 +21,17 @@ Este repositorio contiene **el código que produjo cada número del reporte**. N
 |---|---|
 | `Cuadernos/1_analisis_completo.ipynb` | Todo el análisis en orden de ejecución, de la descarga de datos a las tablas del reporte (147 celdas). Sin salidas. |
 | `Cuadernos/2_fase_final.ipynb` | La fase final: prueba en vivo de Almada (E, X6, V-1) y exportación al reporte (G-0 a G-10), 35 celdas. Conserva las salidas de G-8, G-9, G-10 y G-9b. |
-| `reporte/index.html` | El reporte interactivo, versión 2 (14-nov-2026). Se ve publicado en el enlace de arriba. |
+| `reporte/index.html` | El reporte interactivo, versión 2.1 (18-nov-2026). Se ve publicado en el enlace de arriba. |
+| `reporte/patch_v2_1.py` | El script que convierte la versión 2 en la 2.1 (agrega xShift y xRead sin tocar los datos del reporte). |
 | `Docs/preregistro_almada.md` | Las cuatro predicciones sobre Almada, congeladas el 18-oct-2026 a las 23:58, con sus aclaraciones fechadas y el resultado. |
+
+## Las dos métricas: xShift y xRead
+
+**xShift.** La brecha completa entre el perfil del técnico y el del club, en cada rasgo que viaja con él: hacia dónde y cuánto jala. El perfil del técnico es su etapa anterior de 15 partidos o más en otro club, ajustada por contexto y contraída; el del club, sus últimos 18 partidos antes del relevo. Se calcula en desviaciones y se muestra en la unidad del rasgo (por ejemplo, Almada en el América: −2.1 defensores en el área en el córner rival). No dice cuánto de la brecha va a llegar ni si el técnico es bueno: eso lo mide el recorrido (53% a los 12 partidos en lo que trae el técnico, promedio de 27 llegadas). Sirve antes de contratar, para preparar al rival que cambia de técnico y para evaluar al técnico actual.
+
+**xRead.** Partidos que necesita un rasgo para medirse con confianza (confiabilidad 0.7): xRead = 2.33 × σ² ÷ τ², donde σ² es cuánto brinca el rasgo de un partido a otro y τ² cuánto difieren de verdad los técnicos. Se estima partiendo cada etapa en dos mitades al azar. Por ejemplo, la intensidad de presión necesita 21 partidos, más que un torneo; la gente en el área en el córner rival, 6.
+
+Siguiente paso: **xShift+**, la brecha multiplicada por la cobertura esperada según la duración de la etapa (cuánto va a llegar, no solo hacia dónde).
 
 ## Cómo se ejecutó
 
@@ -38,7 +49,7 @@ Este repositorio contiene **el código que produjo cada número del reporte**. N
 | Datos | celdas iniciales, D1, D2, E3, IDS, BP1, BP2 | Descarga, conversión a parquet, tabla de técnicos y etapas, viabilidad del 360 |
 | Objetos base | R-00, R0, R1 | Definiciones del framework: posesión, secuencia, transición, fase de presión, balón parado |
 | Métricas y nivel | R2a, R2b, R2c, R3 (Elo y Elo de xG) | Componentes por equipo-partido, presión, calibración de pases, nivel de cada equipo |
-| Contexto y confiabilidad | R4, R5, R6r | Ajuste por rival, nivel, localía, marcador y tramo; confiabilidad, reloj de medición y contracción |
+| Contexto y confiabilidad | R4, R5, R6r | Ajuste por rival, nivel, localía, marcador y tramo; confiabilidad, xRead y contracción |
 | Rasgos de estilo | R6a-R6d, R7a-R7d, R8a-R8u, R9 | Ataque, transiciones, OBV, uso de jugadores, banquillo, balón parado, organización defensiva 360 |
 | Validaciones previas | E9, V-T, X5, PC, PA | Capa predictiva, holdout 2025/26, extensión a cinco temporadas |
 | Mapa de dueños y compatibilidad | C-0, C-1, C-1b, C-2, C-3, F-1, F-2 | Mapa de dos ejes con placebo, compatibilidad técnico-club, ensayo en 27 llegadas |
@@ -50,10 +61,10 @@ Este repositorio contiene **el código que produjo cada número del reporte**. N
 
 | Sección del reporte | Celdas principales |
 |---|---|
-| Resumen | C-1, G-2, V-1, D1 |
+| Resumen | C-1, G-2, V-1, D1; dos métricas nuevas: los perfiles de etapa de la ficha (xShift) y R5 y R6r (xRead) |
 | 01 · Así juega cada técnico | R4-R9 (rasgos), G-0 (cadena de relevos), G-3, G-4/G-4b (cancha y percentiles), G-5, G-6, G-7 (marcador), R7b (banquillo), G-9, G-9b, G-10 (córners, saque de meta y pase largo reales) |
 | 02 · La prueba en vivo | C-3, preregistro, E-00 a E-5, X6-9, V-1 |
-| 03 · ¿De quién es cada rasgo? | C-1, C-1b, C-2, G-2, A2, L1, R5 y R6r (relojes) |
+| 03 · ¿De quién es cada rasgo? | C-1, C-1b, C-2, G-2, A2, L1, R5 y R6r (xRead) |
 | 04 · Qué decide cada quien | C-1, C-2 (compatibilidad), R8h y G-8 (HOPS), D1 (duración), R5 (semáforo), L1 |
 | 05 · Cómo lo medimos | K1, K1b (concordancia), R5, R6r, G-9b (prueba de mitades) |
 
