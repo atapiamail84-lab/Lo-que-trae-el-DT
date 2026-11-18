@@ -454,6 +454,52 @@ section>.encabezado>*:not(.num){grid-column:2}
 .met2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}.met2>div>div{padding-block:8px;border-bottom:1px solid var(--rule);font-size:.88rem;display:grid;gap:2px}.met2 h4{margin:4px 0 2px}
 .volver-btn{position:fixed;left:16px;bottom:16px;z-index:60;font:700 .85rem var(--f-ui);padding:9px 14px;border-radius:999px;border:0;background:var(--ink);color:var(--paper);cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}.volver-btn[hidden]{display:none!important}
 @media (max-width:820px){.cob-f,.cob.crit .cob-f{grid-template-columns:1fr;gap:4px}.cob-f.cab{display:none}.met2{grid-template-columns:1fr}}
+
+/* v2.1 · xShift y xRead */
+.xm{padding:20px 0 22px;border-bottom:1px solid var(--rule)}
+.xm-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.35fr);gap:0 26px;margin-top:10px}
+.xm-card{display:grid;gap:6px;align-content:start}
+.xm-card h3{font-size:1.9rem;font-weight:800;letter-spacing:-.01em;color:var(--club-am)}
+.xm-card p{font-size:.95rem}
+.xm-card .uso{font-size:.8rem;color:var(--ink-2)}
+.xm-rap{grid-column:3;grid-row:1 / span 2;border-left:1px solid var(--rule);padding-left:22px;display:grid;gap:8px;align-content:start}
+.xm-rap h4{margin:0;font-size:.82rem;font-weight:600;color:var(--ink-2)}
+.xm-cmp{grid-column:1 / span 2;grid-row:2;margin-top:18px;padding-top:14px;border-top:1px solid var(--rule);display:grid;gap:10px;align-content:start}
+.xm-cmp label{display:grid;gap:4px;max-width:520px}
+.xm-grid>*{min-width:0}
+.xm-cmp label .sel-et{width:100%}
+.xm-sig>span:last-child{flex:1;min-width:0}
+.xm-quien{font-size:1.35rem;font-weight:800;letter-spacing:-.01em;line-height:1.1}
+.xm-quien small{display:block;font-size:.85rem;font-weight:500;color:var(--ink-2);margin-top:3px}
+.xm-par{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:stretch}
+.xm-caja{border:1px solid var(--rule);padding:9px 11px;display:grid;gap:2px;align-content:start;font-size:.86rem}
+.xm-caja.t{border-color:var(--club-am);border-width:2px}
+.xm-caja .et{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2)}
+.xm-caja b{font-size:1rem}
+.xm-caja span{color:var(--ink-2)}
+.xm-menos{align-self:center;text-align:center;font-size:.78rem;color:var(--ink-2);line-height:1.2}
+.xm-menos b{display:block;font-size:1.3rem;color:var(--ink)}
+.xm-sig{display:flex;gap:8px;align-items:flex-start;font-size:.88rem;font-weight:600;color:var(--ink);max-width:none}
+.xm-sig .fd,.xm-sig .fm{font-size:1.5rem;line-height:1;color:var(--club-am)}
+.xm-sig .fm,.xm-sig .tm{display:none}
+.xm-rap h4{color:var(--club-am)!important}
+
+.xm-rap label{display:grid;gap:4px}
+.xm-rap .ver-btn{justify-self:start}
+@media (max-width:920px){.xm-sig .fd,.xm-sig .td{display:none}.xm-sig .fm,.xm-sig .tm{display:inline}.xm-grid{grid-template-columns:minmax(0,1fr);gap:16px}.xm-cmp,.xm-rap{grid-column:1;grid-row:auto}.xm-rap{border-left:0;padding-left:0;border-top:0;padding-top:0}.xm-par{grid-template-columns:minmax(0,1fr)}.xm-menos b{display:inline}}
+.xs-t{display:grid;margin-top:10px}
+.xs-f{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,.8fr) minmax(0,.9fr) minmax(0,.8fr);gap:8px;padding:6px 0;border-bottom:1px solid var(--rule);font-size:.85rem;align-items:baseline}
+.xs-f small{display:block;color:var(--ink-2);font-size:.76rem}
+.xs-f.cab{font-weight:600;color:var(--ink-2);border-bottom:2px solid var(--rule-2);font-size:.76rem;padding-top:0}
+.xs-f .xs-v{font-weight:700;font-variant-numeric:tabular-nums}
+.xs-f.poco{color:var(--ink-2)} .xs-f.poco .xs-v{font-weight:500}
+.xm-rap .xs-f{grid-template-columns:minmax(0,1.8fr) minmax(0,.9fr) minmax(0,.7fr)}
+.xs-ok{color:var(--ok);font-weight:600} .xs-no{color:var(--ink-3)}
+.xs-pl{font-size:.82rem;margin-top:10px;line-height:1.9}
+.xs-pl .chip{margin-right:4px}
+.xs-svg{width:100%;max-width:780px;height:auto;display:block;margin-top:8px}
+.xs-d #xs{padding:10px 0 4px}
+.alm-xs{margin-top:30px;padding-top:18px;border-top:2px solid var(--rule-2);display:grid;gap:6px}
 </style>
 
 <div class="wrap" id="informe">
@@ -508,6 +554,7 @@ section>.encabezado>*:not(.num){grid-column:2}
 
 <section class="resumen" id="resumen" aria-labelledby="t-res">
   <h2 id="t-res" class="sr">Resumen</h2>
+  <div class="xm" id="xmetricas"></div>
   <div class="hall" id="hallazgos"></div>
   <p class="nota-pie" id="nota-elo"></p>
 </section>
@@ -526,6 +573,7 @@ section>.encabezado>*:not(.num){grid-column:2}
   <div class="franja"><div class="cadena" id="cadena"></div>
     <div class="fr-ctx"><span class="eyebrow">Contexto de la etapa · depende sobre todo de quién juega, no mide al técnico</span><div class="cuanto" id="cuanto"></div>
     <details class="mas"><summary>Por qué la posesión no es "del técnico"</summary><p class="chico gris">Hay cosas que el técnico decide (lo que viaja con él), cosas que comparte con sus jugadores y cosas que solo puede influir: puede pedir posesiones largas, pero que no se pierda el balón depende de quien lo tiene. El nivel es el lugar del club en la tabla de Elo, una calificación de fuerza que sube o baja con cada resultado según el rival y la localía (no es la tabla de puntos); con ella descontamos la fuerza de la plantilla en todo el análisis.</p></details></div></div>
+  <details class="trajo-d xs-d" id="xs-d" open><summary id="xs-s">xShift y xRead de esta etapa</summary><div id="xs"></div></details>
   <details class="trajo-d" id="trajo-d"><summary id="trajo-s">Qué trajo, rasgo por rasgo</summary><div class="trajo" id="trajo"></div></details>
   <div class="lienzo">
     <div class="cancha-caja">
@@ -568,6 +616,7 @@ section>.encabezado>*:not(.num){grid-column:2}
   <div class="predicciones" id="predicciones"></div>
   <div class="alm-accion"><span id="alm-accion-t">Ya leíste las cuatro predicciones y cómo se iba a calificar cada una.</span><button type="button" class="ver-btn grande" id="alm-play">▶ Ver lo que pasó</button></div>
   <div class="alm-lectura" id="alm-lectura"></div>
+  <div class="alm-xs" id="alm-xs"></div>
 </section>
 
 <section id="dueno" aria-labelledby="t-dueno">
@@ -613,16 +662,26 @@ section>.encabezado>*:not(.num){grid-column:2}
   </div>
   <div class="met">
     <nav class="met-idx" aria-label="Índice del método"></nav>
-    <details class="grupo" id="g-cob"><summary><h3>1. El reto, punto por punto: dónde está cada componente</h3><span class="cuenta">11 componentes · 4 criterios</span></summary><div id="cobertura"></div></details>
-    <details class="grupo" id="g-obj"><summary><h3>2. Los objetos: qué contamos como posesión, transición o presión</h3><span class="cuenta">12 definiciones</span></summary><div id="objetos" class="objetos"></div></details>
-    <details class="grupo" id="g-sup"><summary><h3>3. Supuestos: cómo se pasa de partidos a un perfil</h3><span class="cuenta">6 reglas</span></summary><div id="supuestos" class="objetos"></div></details>
-    <details class="grupo" id="g-val"><summary><h3>4. Validación: las pruebas para no engañarnos</h3><span class="cuenta">6 pruebas</span></summary><div id="validacion"></div></details>
-    <details class="grupo" id="g-met"><summary><h3>5. Métricas: las que ya existían y las que proponemos</h3><span class="cuenta">8 existentes · 12 propias</span></summary><div id="metricas"></div></details>
-    <details class="grupo" id="g-vis"><summary><h3>6. Cómo cuidamos las visualizaciones</h3><span class="cuenta">8 reglas</span></summary><div id="visuales" class="objetos"></div></details>
-    <details class="grupo" id="g-lim"><summary><h3>7. Lo que el método no puede ver</h3><span class="cuenta">9 límites</span></summary><div id="limites" class="objetos"></div></details>
-    <details class="grupo" id="g-pre"><summary><h3>8. Herramientas prestadas de otras disciplinas</h3><span class="cuenta">8 préstamos</span></summary><div id="prestadas" class="objetos"></div></details>
-    <details class="grupo" id="g-glo"><summary><h3>9. Glosario para leer el reporte</h3><span class="cuenta">18 términos</span></summary><div id="glosario" class="objetos"></div></details>
-    <details class="grupo" id="g-rep"><summary><h3>10. Reproducibilidad</h3><span class="cuenta">5 reglas</span></summary><div id="repro" class="objetos"></div></details>
+    <details class="grupo" id="g-x"><summary><h3>1. xShift y xRead: las dos métricas propias</h3><span class="cuenta">2 métricas</span></summary><div class="objetos">
+     <div><b>xShift: qué es</b><span class="gris">La brecha completa entre el perfil del técnico y el del club, en cada rasgo que viaja con él: hacia dónde y cuánto jala. Perfil del técnico: su etapa anterior de 15 partidos o más en otro club, ajustada por contexto y contraída (a una etapa corta se le cree menos). Perfil del club: sus últimos 18 partidos antes del relevo (mínimo 10). xShift = técnico − club, calculado en desviaciones y mostrado en la unidad del rasgo.</span></div>
+     <div><b>xShift: qué no es</b><span class="gris">No dice cuánto de esa brecha va a llegar ni si el técnico es bueno. Cuánto llega se mide aparte, con el recorrido: a los 12 partidos, el equipo recorre en promedio 53% de la brecha en lo que trae el técnico y 29% en lo del plantel (27 llegadas). Al terminar la etapa, 52% de los equipos quedó más cerca del técnico nuevo que de su club anterior; al azar serían 26%.</span></div>
+     <div><b>xShift: cuándo se usa</b><span class="gris">Antes de contratar (qué compras), cuando el rival estrena técnico (qué preparar) y con el técnico actual: junto al recorrido, dice qué parte de su idea ya llegó. Existe cuando el técnico tuvo una etapa previa en la liga y hay datos del club antes de su llegada: 24 de las 87 etapas. Una brecha menor a media desviación se marca como "jala poco": con menos, cualquier movimiento se confunde con el ruido.</span></div>
+     <div><b>xRead: qué es</b><span class="gris">Partidos que necesita un rasgo para medirse con confianza (confiabilidad 0.7): desde qué partido los números separan la idea del técnico del azar de cada partido. xRead = 2.33 × σ² ÷ τ². σ²: cuánto brinca el rasgo de un partido a otro (rival y partido). τ²: cuánto difieren de verdad los técnicos entre sí (señal). 2.33 = 0.7 ÷ 0.3.</span></div>
+     <div><b>xRead: cómo se estima</b><span class="gris">Cada etapa se parte en dos mitades al azar: lo que comparten es señal; lo que las separa, ruido. El intervalo usa 500 remuestreos de etapas sobre 50 repartos. Se calcula para la diferencia típica entre técnicos: uno extremo se lee antes. Con n partidos, confiabilidad = 1 ÷ (1 + 0.43 × xRead ÷ n): llega a 0.7 justo cuando n = xRead.</span></div>
+     <div><b>xRead: el corte</b><span class="gris">0.7 es el estándar de la psicometría. Con otro corte, todos los xRead se escalan igual y su orden no cambia: con 0.6, × 0.64 (intensidad de presión: 13 partidos); con 0.8, × 1.71 (36).</span></div>
+     <div><b>De dónde vienen</b><span class="gris">xShift sale del eje "viaja con el técnico", que sigue a los directivos que cambian de empresa (Bertrand y Schoar, 2003). xRead sale de la psicometría: la confiabilidad de una medida y cuántas observaciones necesita (Spearman-Brown).</span></div>
+     <div><b>Siguiente paso: xShift+</b><span class="gris">Brecha × cobertura esperada según la duración de la etapa: cuánto va a llegar, no solo hacia dónde. Hoy solo existe el promedio (53% a los 12 partidos en lo que trae el técnico).</span></div>
+    </div></details>
+    <details class="grupo" id="g-cob"><summary><h3>2. El reto, punto por punto: dónde está cada componente</h3><span class="cuenta">11 componentes · 4 criterios</span></summary><div id="cobertura"></div></details>
+    <details class="grupo" id="g-obj"><summary><h3>3. Los objetos: qué contamos como posesión, transición o presión</h3><span class="cuenta">12 definiciones</span></summary><div id="objetos" class="objetos"></div></details>
+    <details class="grupo" id="g-sup"><summary><h3>4. Supuestos: cómo se pasa de partidos a un perfil</h3><span class="cuenta">6 reglas</span></summary><div id="supuestos" class="objetos"></div></details>
+    <details class="grupo" id="g-val"><summary><h3>5. Validación: las pruebas para no engañarnos</h3><span class="cuenta">6 pruebas</span></summary><div id="validacion"></div></details>
+    <details class="grupo" id="g-met"><summary><h3>6. Métricas: las que ya existían y las que proponemos</h3><span class="cuenta">8 existentes · 13 propias</span></summary><div id="metricas"></div></details>
+    <details class="grupo" id="g-vis"><summary><h3>7. Cómo cuidamos las visualizaciones</h3><span class="cuenta">8 reglas</span></summary><div id="visuales" class="objetos"></div></details>
+    <details class="grupo" id="g-lim"><summary><h3>8. Lo que el método no puede ver</h3><span class="cuenta">9 límites</span></summary><div id="limites" class="objetos"></div></details>
+    <details class="grupo" id="g-pre"><summary><h3>9. Herramientas prestadas de otras disciplinas</h3><span class="cuenta">8 préstamos</span></summary><div id="prestadas" class="objetos"></div></details>
+    <details class="grupo" id="g-glo"><summary><h3>10. Glosario para leer el reporte</h3><span class="cuenta">19 términos</span></summary><div id="glosario" class="objetos"></div></details>
+    <details class="grupo" id="g-rep"><summary><h3>11. Reproducibilidad</h3><span class="cuenta">5 reglas</span></summary><div id="repro" class="objetos"></div></details>
   </div>
   <p class="chico gris">Datos: eventos StatsBomb 360 de la Liga MX, cinco temporadas del Apertura 2021 al Clausura 2026 (más 11 partidos del Apertura 2026 para la prueba en vivo), usados solo para esta competencia. Se publican resultados agregados, nunca los datos.</p>
 </section>
@@ -687,7 +746,7 @@ function pintarResumen(){
   document.getElementById('nota-elo').innerHTML=`* Elo: una calificación de fuerza de cada equipo que sube o baja con cada resultado, según el rival y la localía. Es la medida de nivel de la plantilla que usamos en todo el análisis.`;
   const RETO=[['La historia de un técnico','Jardine, paso a paso','#historia'],['Decisiones y KPIs','qué hace cada quien','#decisiones'],['Construcción','salida y saque de meta','construccion'],['Progresión','ritmo y avance','progresion'],['Generación de ocasiones','llegadas, centros, OBV','ocasiones'],['Presión','intensidad, altura, contrapresión','presion'],
    ['Organización defensiva','bloque, espacio, laterales','defensa'],['Transiciones','contras y pérdidas','transicion'],['Uso de jugadores','roles, sistemas, cambios','#banquillo'],['Balón parado','córners, tiros libres y banda; a favor y en contra','bp_of|bp_def'],
-   ['Consistencia y variabilidad','confiabilidad, relojes, firmeza','#relojes'],['Evidencia cuantitativa','métricas propias vs. StatsBomb','#metodo'],
+   ['Consistencia y variabilidad','confiabilidad, xRead, firmeza','#relojes'],['Evidencia cuantitativa','métricas propias vs. StatsBomb','#metodo'],
    ['Bonus: la prueba en vivo con Almada','4 predicciones congeladas, 4 cumplidas','#almada']];
   document.getElementById('reto').innerHTML=RETO.map(([n,s,c],i)=>`<button type="button" data-c="${c}"${i<2?' class="dest"':i===RETO.length-1?' class="dest bonus"':''}>${i<2?['▶ ','◆ '][i]:i===RETO.length-1?'★ ':''}${n}<span>${s[0].toUpperCase()+s.slice(1)}</span></button>`).join('');
   document.querySelectorAll('#reto button').forEach(b=>b.onclick=()=>{const c=b.dataset.c;if(c.startsWith('#')){document.querySelector(c).scrollIntoView({behavior:'smooth'});return}
@@ -700,7 +759,7 @@ function vistaBase(capa){st.capa=capa||'sin';st.ref='liga';st.esp=false;st.linea
   document.querySelectorAll('#capa button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===st.capa));document.querySelectorAll('#ref button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v==='liga'));
   document.querySelectorAll('#linea button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v==='todo'));const e=document.querySelector('#esp button');if(e)e.setAttribute('aria-pressed','false')}
 function irRetrato(cfg){st.grupo=cfg.grupo||'Jardine';st.etapa=cfg.etapa;vistaBase(cfg.capa);st.anim=cfg.anim||null;
-  todo();if(cfg.ir==='#trajo-d')document.getElementById('trajo-d').open=true;let t=document.querySelector(cfg.ir||'.cancha-caja');if(cfg.abrir){const d=document.querySelector(`#ficha details[data-c="${cfg.abrir}"]`);if(d){d.open=true;if(!cfg.ir&&innerWidth>920)t=d}}
+  todo();if(cfg.ir==='#trajo-d')document.getElementById('trajo-d').open=true;if(cfg.ir==='#xs-d')document.getElementById('xs-d').open=true;let t=document.querySelector(cfg.ir||'.cancha-caja');if(cfg.abrir){const d=document.querySelector(`#ficha details[data-c="${cfg.abrir}"]`);if(d){d.open=true;if(!cfg.ir&&innerWidth>920)t=d}}
   if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}
 function pintarHistoria(){const SL='Atlético San Luis · 2',AM='América · 3',ps=DATA.pct[SL]||{},pa=DATA.pct[AM]||{},rs=(DATA.rank||{})[SL]||{},ra=(DATA.rank||{})[AM]||{},es=E[SL],ea=E[AM];
   const tr=regla(ea),nom=o=>o.n.toLowerCase(),pc=x=>f1(x,0);
@@ -913,18 +972,18 @@ function pintarCadena(){
   const T=document.getElementById('trajo');
   if(!(prev&&e.antecesor)){T.innerHTML=`<p class="chico gris">${prev?'':'No dirigió antes otro club dentro de los datos. '}${e.antecesor?'':'No hay datos del club antes de su llegada. '}Por eso no se puede calcular qué trajo.</p>`;return}
   const vv=(r,x)=>relativo(r.id)?`${sg(x,dR(r))} ${uRel(r)} vs. liga`:vU(r,x);
-  const fila=o=>`<div class="tr-fila"><div><b>${o.n}</b><small>${o.pal[0].toUpperCase()+o.pal.slice(1)}: con ${ant} ${vv(o.r,o.c)} · su ${prev} ${vv(o.r,o.t)} · aquí ${vv(o.r,o.nw)}</small></div>${recorrido(o)}<span class="pc">${pctR(o.cob)}</span></div>`;
+  const fila=o=>`<div class="tr-fila"><div><b>${o.n}</b><small>${o.pal[0].toUpperCase()+o.pal.slice(1)}: ${xsCon(e)} ${vv(o.r,o.c)} · su ${prev} ${vv(o.r,o.t)} · aquí ${vv(o.r,o.nw)}</small></div>${recorrido(o)}<span class="pc">${pctR(o.cob)}</span></div>`;
   const chip=o=>`<span class="chip">${o.n} <i>${pctR(o.cob)}</i></span>`,vac='<span class="vacio">Ninguno.</span>';
   T.innerHTML=`<div class="tr-cab"><h3>¿Qué trajo ${corto(e.tecnico)} de ${prev}?</h3>
-     <p class="chico gris">El porcentaje es cuánto del camino entre el ${e.club} de ${ant} (0%) y su ${prev} (100%) recorrió el equipo. Desde 50% (raya punteada) cuenta como "lo trajo".</p>
-     <details class="mas"><summary>Cómo se calcula</summary><p class="chico gris">Solo cuentan los rasgos en los que su ${prev} y el ${e.club} de ${ant} jugaban claramente distinto. Más de 100% quiere decir que fue todavía más lejos que su ${prev}; menos de 0%, que se movió al revés. Es la misma regla que usamos para anticipar a Almada. Los rasgos que se miden contra la liga (por ejemplo, gente en la contra) se muestran como diferencia frente a ella.</p></details></div>
+     <p class="chico gris">El porcentaje es cuánto del camino entre el ${e.club} ${xsDe(e)} (0%) y su ${prev} (100%) recorrió el equipo. Desde 50% (raya punteada) cuenta como "lo trajo".</p>
+     <details class="mas"><summary>Cómo se calcula</summary><p class="chico gris">Solo cuentan los rasgos en los que su ${prev} y el ${e.club} ${xsDe(e)} jugaban claramente distinto. Más de 100% quiere decir que fue todavía más lejos que su ${prev}; menos de 0%, que se movió al revés. Es la misma regla que usamos para anticipar a Almada. Los rasgos que se miden contra la liga (por ejemplo, gente en la contra) se muestran como diferencia frente a ella.</p></details></div>
    <div class="tr-grid">
     <div class="tr-bloque v"><h4><i class="marca V"></i>Lo trajo <small>viaja con el técnico · recorrió la mitad o más</small></h4>${p.trajo.length?p.trajo.map(fila).join(''):vac}</div>
     <div class="tr-bloque"><h4><i class="marca V"></i>Lo traía, pero aquí no se vio <small>viaja con el técnico · menos de la mitad</small></h4><div class="chips">${p.noTrajo.length?p.noTrajo.map(chip).join(''):vac}</div>
       <h4 style="margin-top:12px"><i class="marca P"></i>No cambió, y no era suyo <small>depende de quién juega · menos de la mitad</small></h4><div class="chips">${p.quedo.length?p.quedo.map(chip).join(''):vac}</div>
       <h4 style="margin-top:12px"><i class="marca P"></i>Cambió sin ser suyo <small>depende de quién juega · la mitad o más</small></h4>${p.cambio.length?p.cambio.map(fila).join(''):vac}</div>
    </div>
-   <p class="chico gris">"Claramente distinto" = separados al menos media desviación: lo que va de un equipo en la mitad de la liga a uno por encima de 69 de cada 100. Con menos que eso, cualquier movimiento se confunde con el ruido. <span class="leyrec"><svg viewBox="0 0 16 10" width="16" height="10"><circle cx="5" cy="5" r="3.5" fill="none" stroke="currentColor"/></svg> como con ${ant} · <svg viewBox="0 0 10 10" width="10" height="10"><rect x="1.5" y="1.5" width="7" height="7" fill="none" stroke="currentColor"/></svg> como su ${prev}</span></p>`;
+   <p class="chico gris">"Claramente distinto" = separados al menos media desviación: lo que va de un equipo en la mitad de la liga a uno por encima de 69 de cada 100. Con menos que eso, cualquier movimiento se confunde con el ruido. <span class="leyrec"><svg viewBox="0 0 16 10" width="16" height="10"><circle cx="5" cy="5" r="3.5" fill="none" stroke="currentColor"/></svg> como ${xsCon(e)} · <svg viewBox="0 0 10 10" width="10" height="10"><rect x="1.5" y="1.5" width="7" height="7" fill="none" stroke="currentColor"/></svg> como su ${prev}</span></p>`;
 }
 function pintarCuanto(){
   const e=E[st.etapa],L=DATA.liga,pos=e.r['r4:posesion'],ft=e.r['r4:field_tilt'],rk=(DATA.rank||{})[st.etapa];
@@ -964,7 +1023,7 @@ function escala(r,v,pc,pc2){const W=300,H=22,x=p=>6+(W-12)*p/100,lo=100*Phi(v.lo
    <rect x="${x(31)}" y="9" width="${x(69)-x(31)}" height="4" fill="var(--rule)"/><line x1="6" x2="${W-6}" y1="11" y2="11" stroke="var(--rule)" stroke-width="1"/><line x1="${x(50)}" x2="${x(50)}" y1="3" y2="19" stroke="var(--ghost)"/>
    <rect x="${x(lo)}" y="7" width="${Math.max(2,x(hi)-x(lo))}" height="8" fill="var(--club)" opacity=".2"/><rect x="${x(pc)-2}" y="2" width="4" height="18" fill="var(--club)"/>${pc2!=null?`<circle cx="${x(pc2)}" cy="11" r="5" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>`:''}</svg>`}
 function semaforo(r,n){const c=conf(r.reloj,n),k=c>=.7?'ok':c>=.5?'pre':'no',t={ok:'Se puede leer',pre:'Lectura preliminar',no:'Todavía no se puede leer'}[k];
-  return `<span class="sem ${k}" title="Confiabilidad ${f1(c,2)} con ${n} partidos"><i></i><b>${t}</b><span>${n} partidos; ${k==='ok'?'le bastan':'necesita'} ${r.reloj}</span></span>`}
+  return `<span class="sem ${k}" title="Confiabilidad ${f1(c,2)} con ${n} partidos"><i></i><b>${t}</b><span>${n} partidos; xRead ${r.reloj}</span></span>`}
 function valorTxt(r,v){const d=dR(r);if(relativo(r.id))return `${sg(v.perfil,d)} ${uRel(r)} frente a la liga`;
   const u=uTxt(r);return u==='%'?`${f1(r.liga+v.perfil,1)}% · liga ${f1(r.liga,1)}%`:`${f1(r.liga+v.perfil,d)} ${u} · liga ${f1(r.liga,d)}`}
 const apell=e=>{const g=e&&e.grupo;return g||corto(e.tecnico)};
@@ -992,7 +1051,7 @@ function pintarFicha(){
   let h=`<div class="ficha-ctl" role="group" aria-label="Controles de la ficha"><button type="button" data-a="abrir">Abrir todos los grupos</button><button type="button" data-a="cerrar">Cerrar todos</button><button type="button" data-a="saltar">Saltar al final de la ficha ↓</button></div>
    <details class="leer"${prim||abiertos.has('leer')?' open':''} data-c="leer"><summary><b>Cómo leer cada rasgo</b></summary>
      <span><svg viewBox="0 0 60 12" width="60" height="12" aria-hidden="true"><rect x="18" y="4" width="24" height="4" fill="var(--rule)"/><line x1="0" x2="60" y1="6" y2="6" stroke="var(--rule)"/><rect x="44" y="0" width="3" height="12" fill="var(--club)"/></svg> <span>Lugar entre las 87 etapas de técnico con 15 partidos o más (<span class="elo-ir" data-t="Cuántos técnicos y etapas" tabindex="0" role="button">cuántas son</span>). La franja gris es el centro de la liga (de 31 a 69 de cada 100); la sombra de color, la incertidumbre. Al bajar por la ficha aparece arriba una barra para cambiar de etapa o compararla con otra: la otra etapa se marca con un círculo ○.</span></span>
-     <span><span class="sem ok"><i></i></span><span class="sem pre"><i></i></span><span class="sem no"><i></i></span> Semáforo de medición: los números necesitan cierto número de partidos para separar la idea del técnico del azar de cada partido (su reloj). Verde, ya se lee; ámbar, preliminar; rojo, todavía no.</span>
+     <span><span class="sem ok"><i></i></span><span class="sem pre"><i></i></span><span class="sem no"><i></i></span> Semáforo de medición: los números necesitan cierto número de partidos para separar la idea del técnico del azar de cada partido (su xRead). Verde, ya se lee; ámbar, preliminar; rojo, todavía no.</span>
      <span><span><b>Firme</b> o <b>tendencia</b>: qué tan seguro es el dueño del rasgo. Firme, se sostiene en 95 de cada 100 remuestreos de los datos; tendencia, apunta ahí pero no se descarta el azar.</span></span></details>`;
   h+=`<details class="grupo viaja" data-c="viaja" ${abiertos.has('viaja')?'open':''}><summary><h3><i class="marca V"></i> Lo que viaja con él</h3><span class="cuenta">${viaja.length} rasgos</span></summary>
    <p>Los rasgos que se mueven con el técnico cuando cambia de club. También aparecen, marcados, dentro de su componente.</p>${viaja.map(r=>fila(r,e)).join('')}<button type="button" class="cerrar-g">Cerrar «Lo que viaja con él» ↑</button></details>`;
@@ -1206,7 +1265,7 @@ function animar(){gA.selectAll('*').interrupt().remove();marc().hidden=true;marc
   (ESCENAS[a.tipo]||(()=>{}))({a,r,e,v,J,val,lg});
   if(!['saque','largo','corner_of','corner_def'].includes(a.tipo))document.getElementById('panel').insertAdjacentHTML('beforeend','<span class="gris chico"><b>Escena ilustrativa:</b> los números son los medidos; el movimiento solo explica el concepto.</span>')}
 /* etiquetas de gráficas y leyendas: siempre con mayúscula inicial (salvo xG y yd) */
-const mayus=n=>{const t=n.nodeValue;if(!t)return;const m=t.match(/^([^0-9A-Za-zÀ-ÿ]*)([a-záéíóúñ])/);if(!m||/^[^A-Za-z]*(xG|yd|vs\.)/.test(t))return;const u=m[1]+m[2].toUpperCase()+t.slice(m[0].length);if(u!==t)n.nodeValue=u};
+const mayus=n=>{const t=n.nodeValue;if(!t)return;const m=t.match(/^([^0-9A-Za-zÀ-ÿ]*)([a-záéíóúñ])/);if(!m||/^[^A-Za-z]*(xG|yd|vs\.|xShift|xRead)/.test(t))return;const u=m[1]+m[2].toUpperCase()+t.slice(m[0].length);if(u!==t)n.nodeValue=u};
 const SEL_MAY='#informe svg text, #informe svg tspan, .mini-leg>span, .leyenda-mapa>span, .ff>span';
 const barrer=root=>{(root.querySelectorAll?[...(root.matches&&root.matches(SEL_MAY)?[root]:[]),...root.querySelectorAll(SEL_MAY)]:[]).forEach(el=>{const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);const f=w.nextNode();if(f)mayus(f)})};
 new MutationObserver(ms=>ms.forEach(m=>{if(m.type==='characterData'){const p=m.target.parentElement;if(p&&p.matches(SEL_MAY)&&m.target===p.firstChild)mayus(m.target)}else m.addedNodes.forEach(n=>{if(n.nodeType===1)barrer(n);else if(n.nodeType===3&&n.parentElement&&n.parentElement.matches(SEL_MAY))mayus(n)})})).observe(document.body,{subtree:true,childList:true,characterData:true});
@@ -2065,14 +2124,14 @@ function pintarRelojes(){const L=DATA.rasgos.filter(r=>r.legible&&r.reloj&&r.com
   const pts=O.map(r=>`<circle cx="${x(r.reloj)}" cy="${30+((r.reloj*7)%11)}" r="3" fill="var(--ghost)" opacity=".6"><title>${r.nombre}: ${r.reloj} partidos</title></circle>`).join('')
    +V.map((r,i)=>`<g><rect x="${x(r.reloj)-4}" y="${62+(i%3)*11-4}" width="8" height="8" fill="var(--club-am)"><title>${r.nombre}: ${r.reloj} partidos</title></rect></g>`).join('');
   document.getElementById('relojes').innerHTML=`
-   <div><h3>Reloj de medición: cuándo los números alcanzan a la idea</h3>
+   <div><h3>xRead: desde qué partido se puede medir cada rasgo</h3>
     <p class="chico gris">Partidos que necesita cada rasgo para que su valor deje de depender de qué partidos tocaron (confiabilidad 0.7). Cuadros: los ${V.length} que viajan con el técnico. Puntos grises: el resto.</p>
     <svg viewBox="0 0 ${W} 110" role="img" aria-label="Partidos que necesita cada rasgo">
      <rect x="${x(med)}" y="18" width="${x(45)-x(med)}" height="76" fill="var(--warn)" opacity=".07"/><line x1="${x(med)}" x2="${x(med)}" y1="14" y2="96" stroke="var(--warn)" stroke-width="1.5"/>
      <text x="${x(med)+5}" y="22" font-size="10" fill="var(--warn)" font-weight="700">${med} partidos: la mitad de los técnicos ya se fue</text>
      ${pts}<line x1="20" x2="${W-14}" y1="98" y2="98" stroke="var(--rule)"/>${[0,10,20,30,40].map(t=>`<text x="${x(t)}" y="108" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">${t}</text>`).join('')}</svg>
     <p class="chico">De lo que viaja con el técnico, ${V.filter(r=>r.reloj>med).length} de ${V.length} rasgos se leen después de que la mitad de los técnicos ya se fue: ${V.filter(r=>r.reloj>med).map(r=>`${r.corto||r.nombre.toLowerCase()} (${r.reloj})`).join(', ')}. La intensidad de presión llega justo antes (${R['r4:intensidad_ppda'].reloj}). El esquema del córner en contra, en cambio, se lee en 5 o 6. Leerse en los datos no es lo mismo que verse: en el video la idea puede notarse antes.</p></div>
-   <div><h3>Reloj de implantación: cuándo la idea llega al campo</h3>
+   <div><h3>Implantación: cuándo la idea llega al campo</h3>
     <p class="chico gris">Otra pregunta: el técnico ya está, pero ¿desde cuándo se nota su idea? No todo llega a la vez.</p>
     ${(()=>{const sw=150,sh=56,px=i=>8+(sw-16)*i/11,py=v=>44-30*v,fin=`<line x1="8" x2="${sw-8}" y1="${py(1)}" y2="${py(1)}" stroke="var(--club-am)" stroke-dasharray="3 2" opacity=".7"/>`,
       ln=f=>`<polyline points="${d3.range(12).map(i=>px(i)+','+py(f(i))).join(' ')}" fill="none" stroke="var(--ink)" stroke-width="2.2"/>${d3.range(12).map(i=>`<circle cx="${px(i)}" cy="${py(f(i))}" r="2" fill="var(--ink)"/>`).join('')}`,
@@ -2123,12 +2182,14 @@ function tira(z,za){const W=260,H=30,x=d3.scaleLinear([-3.5,3.5],[8,W-8]).clamp(
 const vD=(id,x)=>R[id]?vU(R[id],x):f1(x,1);
 /* ---------- KPIs: los números que sí sirven para decidir ---------- */
 function pintarKPI(){const K=[
+  ['xShift por rasgo','unidad del rasgo','Al firmar al técnico, cuando el rival estrena técnico o para evaluar al actual','Analistas y cuerpo técnico','Hacia dónde y cuánto jala el técnico al equipo en cada rasgo que viaja con él. Junto al recorrido, dice qué parte de su idea ya llegó.','xmetricas'],
+  ['xRead por rasgo','partidos','Antes de evaluar cualquier rasgo','Analistas','Desde qué partido se puede medir cada rasgo con confianza. Antes de su xRead, los números no distinguen la idea del azar.','relojes'],
   ['Compatibilidad técnico-club','0 a 100%','Antes de contratar','Directiva','Qué tanto se parece el último equipo del candidato al club, en lo que viaja con el técnico. Alta = continuidad; baja = cambio de estilo. Cuál conviene es decisión del proyecto.','e1'],
   ['Territorio por titular fuera','−0.75 puntos de field tilt','Al planear rotaciones','Cuerpo técnico','Lo que cuesta, en dominio territorial, cada titular fuera del once habitual. Lo que depende de quién juega se gestiona con la alineación.','dueno'],
   ['Primer contacto según ventaja aérea','+4.6 puntos porcentuales','Al preparar cada rival','Cuerpo técnico','Cuánto más gana el primer contacto en el córner el que tiene mucha ventaja aérea. Dice contra qué rivales preparar el córner en contra de forma especial.','e3'],
   ['Superioridad por zona en el córner en contra','defensores − atacantes','Cada 5 partidos (los remates por zona, al cierre de la temporada)','Cuerpo técnico','En el primer contacto, cuántos defensores más que atacantes hay en cada zona (fotos 360). Se lee en una etapa; dónde le rematan, no: hacen falta más de tres temporadas.','e3'],
   ['Cambio de estilo frente a una llegada típica','distancia > umbral','A los 10-12 partidos','Directiva','Si el equipo cambió más que 3 de cada 4 llegadas con los mismos partidos. Confirma que el relevo movió el cómo, no solo el resultado.','almada'],
-  ['Semáforo de medición','verde · ámbar · rojo','Antes de cualquier evaluación','Directiva','Confiabilidad del rasgo con los partidos dirigidos. No se evalúa en rojo: antes de su reloj, los números no distinguen la idea del azar.','e2'],
+  ['Semáforo de medición','verde · ámbar · rojo','Antes de cualquier evaluación','Directiva','Confiabilidad del rasgo con los partidos dirigidos. No se evalúa en rojo: antes de su xRead, los números no distinguen la idea del azar.','e2'],
   ['Recorrido por rasgo que viaja','% del camino','Cada 5 partidos, desde que el rasgo se puede leer','Directiva y cuerpo técnico','Cuánto se movió el equipo hacia el perfil del técnico en cada rasgo suyo. 50% o más = la idea llegó; menos = todavía no se ve.','e2']];
   document.getElementById('kpis').innerHTML=K.map(([n,u,cu,qu,t,ir])=>`<button type="button" class="kpi" data-ir="${ir}"><span class="kn">${n}</span><span class="ku">${u[0].toUpperCase()+u.slice(1)}</span><span class="kt">${t}</span><span class="kq"><b>Cuándo:</b> ${cu} · <b>Quién:</b> ${qu}</span></button>`).join('');
   document.querySelectorAll('#kpis .kpi').forEach(b=>b.onclick=()=>{const v=b.dataset.ir;if(v.startsWith('e')){est.pub=v;pintarEsc();document.getElementById('publico').scrollIntoView({behavior:'smooth',block:'start'})}else document.getElementById(v).scrollIntoView({behavior:'smooth'})})}
@@ -2173,14 +2234,14 @@ function pintarE2(){const n=est.n,V=DATA.rasgos.filter(r=>r.dueno==='V').sort((a
   const atajos=[[11,'Almada hoy'],[17,'un torneo'],[24,'etapa típica'],[34,'un año']];
   const sem=c=>c>=.7?'ok':c>=.5?'pre':'no';
   document.getElementById('escenario').innerHTML=`
-  <p class="texto">Un rasgo se puede evaluar cuando su valor deja de depender de qué partidos tocaron. Cada rasgo tiene su reloj: los partidos que necesita para llegar a una confiabilidad de 0.7. Antes de su reloj, el analista y el scout pueden ver la idea en el video; lo que todavía no hay es confirmación en los datos. Elige en qué momento de la etapa estás y mira qué se puede evaluar con números.</p>
+  <p class="texto">Un rasgo se puede evaluar cuando su valor deja de depender de qué partidos tocaron. Cada rasgo tiene su reloj: los partidos que necesita para llegar a una confiabilidad de 0.7. Antes de su xRead, el analista y el scout pueden ver la idea en el video; lo que todavía no hay es confirmación en los datos. Elige en qué momento de la etapa estás y mira qué se puede evaluar con números.</p>
   <div class="esc-int"><div class="desliza">
     <div class="ctl-n"><button type="button" data-d="-5">−5</button><button type="button" data-d="-1">−1</button><label for="npart-in" class="sr">Partidos dirigidos</label><input id="npart-in" type="number" min="3" max="80" value="${n}"><button type="button" data-d="1">+1</button><button type="button" data-d="5">+5</button></div>
     <input id="npart" type="range" min="3" max="80" step="1" value="${n}" aria-label="Partidos dirigidos">
     <div class="atajos">${atajos.map(([v,t])=>`<button type="button" data-n="${v}" aria-pressed="${v===n}">${v} · ${t}</button>`).join('')}</div>
     <p><b>Con ${n} partidos se pueden evaluar ${k} de los ${V.length} rasgos que viajan con el técnico</b>${kp?`, y ${kp} más en lectura preliminar`:''}. <span class="gris">${ant}% de las etapas completas de la liga ya terminó antes de este punto.</span></p>
     <div class="leg">${V.map(r=>{const c=conf(r.reloj,n);return `<div class="fl"><span><span class="sem ${sem(c)}"><i></i></span> ${r.nombre}</span><span class="b"><i style="width:${100*c}%;background:var(--${sem(c)==='ok'?'ok':sem(c)==='pre'?'amber':'warn'})"></i><u style="left:70%"></u><u style="left:50%;opacity:.4"></u></span><span class="chico">${r.reloj} partidos</span></div>`}).join('')}</div>
-    <p class="chico gris">Barra: confiabilidad con ${n} partidos; marcas en 0.5 y 0.7. A la derecha, el reloj de cada rasgo.</p></div>
+    <p class="chico gris">Barra: confiabilidad con ${n} partidos; marcas en 0.5 y 0.7. A la derecha, el xRead de cada rasgo.</p></div>
     <div><h3>¿Cuánto dura un técnico?</h3><p class="chico gris" style="margin:4px 0 6px">${D.length} etapas completas, sin interinos. Porcentaje que ya terminó a los n partidos.</p><svg id="rel2" viewBox="0 0 360 240" role="img" aria-label="Porcentaje de etapas terminadas según partidos dirigidos"></svg></div></div>
   ${(()=>{const AR=Object.fromEntries(DATA.almada.rasgos.map(q=>[q.rasgo,q])),C=DATA.e1.C,dif=Object.fromEntries(C.dif.map(q=>[q.id,q]));
     const ej=V.filter(r=>dif[r.id]&&Math.abs(dif[r.id].z-dif[r.id].za)>=.5).map(r=>{const c=conf(r.reloj,11),a=AR[r.id];
@@ -2190,9 +2251,9 @@ function pintarE2(){const n=est.n,V=DATA.rasgos.filter(r=>r.dueno==='V').sort((a
     const sal=ids.map(k=>{const e=E[k],n_=e.partidos,ok=V.filter(r=>conf(r.reloj,n_)>=.7),no=V.filter(r=>conf(r.reloj,n_)<.5);
       return `<li><b>${corto(e.tecnico)} en ${e.club}: ${n_} partidos.</b> Al irse se podían leer ${ok.length} de ${V.length} rasgos que viajan. ${no.length?`Sin leer: ${no.slice(0,4).map(r=>r.corto||r.nombre.toLowerCase()).join(', ')}${no.length>4?' y otros '+(no.length-4):''}.`:''}</li>`}).join('');
     return `<div class="esc-int"><div><h3>Ejemplo 1 · El tablero de Almada con 11 partidos</h3><p class="chico gris" style="margin:4px 0 6px">Así se vería el KPI hoy, rasgo por rasgo, en lo que Almada traía distinto al América. La regla: evaluar solo en verde, y pedir que el equipo recorra al menos la mitad del camino.</p>
-      <div class="tabla-k1"><table style="min-width:0"><thead><tr><th>Rasgo que viaja</th><th>Reloj</th><th>Veredicto a los 11 partidos</th></tr></thead><tbody>${ej}</tbody></table></div>
+      <div class="tabla-k1"><table style="min-width:0"><thead><tr><th>Rasgo que viaja</th><th>xRead</th><th>Veredicto a los 11 partidos</th></tr></thead><tbody>${ej}</tbody></table></div>
       <p class="chico">Lectura para la directiva: lo del córner ya llegó; la presión y la libertad de los roles todavía no se pueden juzgar. Para esas dos, hoy pesa lo que el cuerpo técnico y los analistas ven en el video: los números todavía no pueden confirmarlo ni desmentirlo.</p></div>
-     <div><h3>Ejemplo 2 · Etapas que terminaron antes de que los datos pudieran confirmarlas</h3><p class="chico gris" style="margin:4px 0 6px">Tres etapas cortas de este reporte. Es aritmética del reloj, no un juicio sobre por qué terminaron.</p><ul class="impl chico">${sal}</ul>
+     <div><h3>Ejemplo 2 · Etapas que terminaron antes de que los datos pudieran confirmarlas</h3><p class="chico gris" style="margin:4px 0 6px">Tres etapas cortas de este reporte. Es aritmética del xRead, no un juicio sobre por qué terminaron.</p><ul class="impl chico">${sal}</ul>
       <p class="chico">La pregunta útil en una revisión de medio torneo no es "¿ya juega como él?", sino "¿en lo que ya se puede leer, el equipo se está moviendo hacia su perfil?".</p></div></div>`})()}
   ${tres(`La etapa típica dura ${d3.median(D)} partidos. El 37%, 62% y 74% de los técnicos se van antes de 21, 30 y 38 partidos, que es cuando se leen su presión, la libertad de los roles y los cambios de sistema.`,
    'KPI por rasgo que viaja: ¿el equipo recorrió al menos la mitad del camino hacia el perfil del técnico, una vez que el semáforo está en verde? Separar "todavía no se nota" de "no está" y evaluar la idea aparte del resultado.',
@@ -2348,7 +2409,7 @@ function pintarE4(){const k=est.perf,P=DATA.e1[k],n=pideLista(P);
   <div class="lista-c"><div class="lc lc-cab"><div>Puesto(s)</div><div>Qué perfil buscar</div><div>Cuánto cambia · cuándo</div><div>Sugerencia de filtro para el scouting</div></div>${n.map(fila).join('')||'<p class="chico">Este perfil se parece tanto al América que no pide cambios de plantilla en lo que viaja con el técnico.</p>'}</div>
   <div class="dos-notas"><p class="chico gris" id="nota-e4"><span data-n="puesto"><b>Puesto(s):</b> cuando son varios, el perfil se busca en cada uno por separado: un jugador por puesto, con la misma cualidad, no un jugador que cubra todos.</span> <span data-n="gap">● ○ ○ / ● ● ○ / ● ● ●: qué tan lejos está el América de lo que pide; la misma distancia que hay entre un equipo en la mitad de la liga y uno que supera a 69, 84 o 93 de cada 100.</span> <span data-n="antes">"Fichar antes de que llegue": el rasgo se instala en 12 partidos o menos, así que si el jugador no está desde el inicio, el técnico arranca sin él.</span> <span data-n="despues">"Puede ficharse después": el rasgo tarda más en notarse y da tiempo de buscarlo con el técnico ya en el club.</span> En los otros ${ya} rasgos que viajan, el América ya se parece a ${quien} o el cambio no pide un jugador nuevo. Las cifras del América son las de los últimos 18 partidos de Jardine, el perfil del club antes del relevo.</p>
   <p class="chico">Se conecta con las otras decisiones: <a href="#decisiones" data-pub="e1">elegir técnico</a> dijo cuánto va a cambiar el equipo; esta lista dice con qué jugadores; <a href="#decisiones" data-pub="e3">el córner</a> muestra cómo se prepara cada semana uno de los rasgos que viajan con él, y <a href="#decisiones" data-pub="e2">cuándo evaluarlo</a> dice en qué partido revisar cada rasgo.</p></div>
-  ${tres(`Los rasgos que viajan con el técnico y en qué se separa del América, con su reloj. Con Almada, lo más lejano era el córner en contra (menos gente en el área y menos en zona) y la libertad de los roles; lo primero ya cambió en 10 partidos.`,
+  ${tres(`Los rasgos que viajan con el técnico y en qué se separa del América, con su xRead. Con Almada, lo más lejano era el córner en contra (menos gente en el área y menos en zona) y la libertad de los roles; lo primero ya cambió en 10 partidos.`,
    'La traducción de rasgo a perfil de jugador es criterio futbolístico, no un dato: es una propuesta para que el área deportiva y el cuerpo técnico la discutan, y para priorizar qué buscar primero.',
    'Qué jugadores concretos encajan: la sugerencia de filtro dice qué se podría medir en cada candidato con los mismos eventos de StatsBomb, pero no lo corrimos jugador por jugador ni mide su precio. Y lo que depende de quién juega (cuánto domina el equipo) mejora con calidad, no con un perfil.')}`;
   document.querySelectorAll('#perfiles4 .perfil').forEach(b=>b.onclick=()=>{est.perf=b.dataset.k;pintarEsc()});
@@ -2372,7 +2433,7 @@ const OBJ=[['Balón parado','Jugada marcada como balón parado; pertenece a quie
  ['Tiempo de posesión','Del primer al último evento de cada posesión; sin el tiempo muerto entre posesiones.']];
 const SUP=[['Contexto','Cada partido se ajusta por rival, nivel de ambos equipos (Elo), localía, marcador y tramo del partido, para comparar técnicos que jugaron en condiciones distintas.'],
  ['Contracción','El perfil de una etapa corta se acerca a la media de la liga en proporción a su ruido: nadie es extremo por haber dirigido pocos partidos.'],
- ['Etapas','Un técnico en un club con 15 partidos o más. Hay 87.'],['Confiabilidad','Un rasgo entra al mapa si su confiabilidad es de al menos 0.5; se lee en una etapa cuando llega a 0.7 (su reloj).'],
+ ['Etapas','Un técnico en un club con 15 partidos o más. Hay 87.'],['Confiabilidad','Un rasgo entra al mapa si su confiabilidad es de al menos 0.5; se lee en una etapa cuando llega a 0.7 (su xRead).'],
  ['Corte del mapa','Un rasgo viaja con el técnico si los equipos del mismo técnico en clubes distintos se parecen en él más de 0.5 (0 = nada, 1 = idéntico; ya corregido por el ruido de medición, y 0.5 es lo que alcanza un rasgo sin efecto por puro azar) y más de lo que el club se parece a sí mismo con otro técnico. Al revés, depende de quién juega.'],['Ventana del club','El perfil del club antes de un relevo son sus últimos 18 partidos (mínimo 10).']];
 const LIM=[['360 sin identidad','Las fotos no dicen quién es cada jugador: el emparejamiento aéreo usa a los que jugaron, no a los que estaban en el área.'],
  ['Una sola cámara','Los diez defensores se ven juntos en 2.5% a 16% de las fotos. Con el balón en el tercio rival, la última línea puede quedar fuera.'],
@@ -2390,7 +2451,7 @@ const GLO=[['Elo','Calificación de fuerza de cada equipo que sube o baja con ca
  ['Dominio del rival','Una ventana de 10 minutos en la que el rival tiene un field tilt de 70% o más, con al menos 20 acciones en el último tercio entre los dos equipos. Es el disparador de "el rival lo domina" en el banquillo.'],
  ['Fotos 360','Para cada evento, la ubicación de los jugadores visibles en la transmisión, sin decir quién es quién.'],['Etapa','Un técnico en un club. Contamos las de 15 partidos o más.'],
  ['Percentil','Lugar entre 100: "más que 84 de cada 100 técnicos" es el percentil 84.'],['Confiabilidad','Qué tanto se repite un rasgo entre dos mitades al azar de los partidos del mismo técnico. 1 = se repite idéntico; 0 = es ruido.'],
- ['Reloj de medición','Partidos que necesita un rasgo para llegar a confiabilidad 0.7.'],['Recorrido (cobertura)','Qué porcentaje de la distancia entre el equipo anterior y el perfil del técnico recorrió el equipo nuevo.'],
+ ['xShift','Brecha técnico-club en cada rasgo que viaja con él: hacia dónde y cuánto jala.'],['xRead','Partidos que necesita un rasgo para llegar a confiabilidad 0.7: desde cuándo se puede medir.'],['Recorrido (cobertura)','Qué porcentaje de la distancia entre el equipo anterior y el perfil del técnico recorrió el equipo nuevo.'],
  ['Compatibilidad','Qué tan parecido es el último equipo de un técnico al club que lo contrata, frente a los demás candidatos (0 a 100%).'],['Preregistro','Escribir y congelar una predicción, con su umbral, antes de ver los datos.'],
  ['Cuántos técnicos y etapas','134 etapas en cinco temporadas (una etapa es un técnico en un club). 87 tienen 15 partidos o más: son las que tienen ficha y contra las que se calcula cada "más que X de cada 100 técnicos". 91 son etapas completas sin interinos (empezaron y terminaron dentro de los datos): miden cuánto dura un técnico. 61 son técnicos distintos con al menos una etapa de 15 partidos o más: los candidatos de la compatibilidad. 20 técnicos dirigieron dos etapas largas en clubes distintos (29 parejas) y hubo 69 relevos en 18 clubes: son las dos pruebas del mapa de dueños.'],
  ['Placebo','Lo que pasaría de todos modos. Para saber si algo es reacción y no azar, se compara con momentos parecidos en los que no pasó nada (misma hora del partido, mismo marcador) o con técnicos y clubes emparejados al azar. Viene de los ensayos clínicos.']];
@@ -2426,19 +2487,19 @@ const COB=[
  ['Presión','Estilo · fase defensiva','ficha:presion|Ficha: presión','Intensidad (PPDA), presión alta, altura del bloque al presionar, contrapresión, cuánto defienden los de arriba','O-9'],
  ['Organización defensiva','Estilo · fase defensiva','ficha:defensa|Ficha: organización defensiva','Bloque con fotos 360 (altura, ancho, espacio que controla, recepciones con espacio, pases que rompen líneas) y dónde defiende cada puesto','O-3, fotos 360'],
  ['Transiciones','Estilo · fase defensiva y ofensiva','ficha:transicion|Ficha: transiciones','Recupera en 10 s después de perder la posesión, gente por delante en la contra, valor en transición, llegada rival tras robo','O-6, O-7, O-8'],
- ['Consistencia y variabilidad','¿Hay identidad? ¿Cambia con el contexto?','#contexto|Según el marcador;#dueno|De quién es cada rasgo;g-val|Prueba de mitades','Mismo rasgo en tres marcadores frente a la liga; dueño del rasgo; reloj de medición e implantación','Todos (O-1 a O-12), confiabilidad, reloj de medición, prueba de mitades'],
+ ['Consistencia y variabilidad','¿Hay identidad? ¿Cambia con el contexto?','#contexto|Según el marcador;#dueno|De quién es cada rasgo;g-val|Prueba de mitades','Mismo rasgo en tres marcadores frente a la liga; dueño del rasgo; xRead e implantación','Todos (O-1 a O-12), confiabilidad, xRead, prueba de mitades'],
  ['Uso de jugadores','Roles, alineaciones y sustituciones','#cancha|Mapa de posiciones;#dueno|Territorio por titular fuera;#banquillo|En el banquillo','Libertad posicional, cambios de sistema, línea de 3 o 5, minutos a menores de 23, titular fuera del once, sustituciones frente a placebo','O-3, placebo'],
  ['Balón parado ofensivo','Córners, tiros libres, saques de banda','ficha:bp_of|Ficha: balón parado a favor;dec:e3|Decisión 3 (el córner)','Envío por zona, ocupación 360 del área, remates por zona, emparejamiento HOPS a favor','O-1, O-10'],
  ['Balón parado defensivo','Marcaje y zonas de vulnerabilidad','ficha:bp_def|Ficha: balón parado en contra;dec:e3|Decisión 3, paso 4','Zona contra hombre, superioridad por zona, remates en contra con su intervalo','O-1, O-10'],
- ['Evidencia cuantitativa','Métricas existentes y propuestas propias','g-met|Métricas del anexo;#kpis|KPIs','Ocho métricas que ya existían y doce propias','Todos (O-1 a O-12)']];
+ ['Evidencia cuantitativa','Métricas existentes y propuestas propias','g-met|Métricas del anexo;#kpis|KPIs','Ocho métricas que ya existían y trece propias','Todos (O-1 a O-12)']];
 const CRIT=[['Innovación','Herramientas de otras disciplinas, variables poco usadas (fotos 360 por etapa, HOPS en el emparejamiento) y una predicción congelada y evaluada en vivo.','g-pre|Préstamos;#almada|Prueba en vivo;g-met|Métricas propias'],
  ['Comunicación','Historia guiada de un técnico, escenas en la cancha con el número real, glosario a un clic y conclusiones primero.','#historia|Historia de Jardine;#ficha|Ficha;g-glo|Glosario'],
  ['Accionabilidad','Cuatro decisiones en el orden en que llegan en la vida de un técnico, cada una con KPI, quién decide y cuándo.','#decisiones|Decisiones;#kpis|KPIs'],
  ['Metodología y visualización','Definiciones escritas antes de analizar, seis pruebas de validación, incertidumbre visible y comparación siempre contra la liga.','g-obj|Objetos;g-val|Validación;g-vis|Visualizaciones']];
 const MET_EX=[['xG','Calidad de cada tiro.'],['OBV','Valor de cada acción con balón.'],['PPDA','Pases del rival por acción defensiva: intensidad de presión.'],['Field tilt','Quién juega en el campo del otro.'],
  ['Posesión','Porcentaje del tiempo con el balón.'],['HOPS','Capacidad aérea de cada jugador.'],['Elo','Nivel del equipo por resultados.'],['Fotos 360','Ubicación de los jugadores en cada evento.']];
-const MET_PR=[['Dueño del rasgo','Dos pruebas: si viaja con el técnico y si se queda en el club.','#dueno'],['Quitar el nivel','Lo mismo, descontando el Elo.','#dueno'],['Reloj de medición','Partidos para que un rasgo se lea (confiabilidad 0.7).','#dueno'],
- ['Reloj de implantación','Cuándo la idea llega al campo: inmediata, escalonada, con sobrecorrección.','#dueno'],['Compatibilidad técnico-club','Parecido del último equipo del candidato con el club.','dec:e1'],
+const MET_PR=[['xShift','Brecha técnico-club en cada rasgo que viaja con él: hacia dónde y cuánto jala.','g-x'],['Dueño del rasgo','Dos pruebas: si viaja con el técnico y si se queda en el club.','#dueno'],['Quitar el nivel','Lo mismo, descontando el Elo.','#dueno'],['xRead','Partidos para que un rasgo se lea (confiabilidad 0.7).','g-x'],
+ ['Implantación','Cuándo la idea llega al campo: inmediata, escalonada, con sobrecorrección.','#dueno'],['Compatibilidad técnico-club','Parecido del último equipo del candidato con el club.','dec:e1'],
  ['Recorrido','Qué porcentaje del camino hacia el perfil del técnico recorrió el equipo.','#retrato'],['Estabilidad por mitades','Si el patrón contra la liga se repite entre dos mitades de los partidos.','g-val'],
  ['Según el marcador','Cada rasgo frente a la liga en el mismo marcador.','#contexto'],['Banquillo frente a placebo','Si el técnico reacciona más que lo que pasaría de todos modos.','#banquillo'],
  ['Territorio por titular fuera','Field tilt perdido por cada titular ausente.','#dueno'],['Emparejamiento óptimo por HOPS','Reparto de marcas que minimiza la desventaja aérea.','dec:e3'],['Superioridad por zona','Defensores menos atacantes en el primer contacto (360).','dec:e3']];
@@ -2512,7 +2573,108 @@ const _pf=pintarFicha;
   decisiones:'<rect x="40" y="20" width="230" height="200"/><rect x="190" y="70" width="80" height="100"/><path d="M40 85 A40 40 0 0 1 40 155"/><circle cx="110" cy="120" r="2.5" fill="currentColor"/>',
   metodo:'<path d="M300 200 A30 30 0 0 0 270 230"/><line x1="0" y1="230" x2="300" y2="230"/><line x1="300" y1="0" x2="300" y2="240"/><rect x="170" y="0" width="130" height="130"/>'};
   Object.entries(F).forEach(([id,g])=>{const h=document.querySelector(`#${id}>.encabezado`);if(h)h.insertAdjacentHTML('afterbegin',`<svg class="sec-cancha" viewBox="0 0 300 240" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.5">${g}</g></svg>`)})})();
-function todo(){if(!todo.una){pintarHistoria();pintarResumen();pintarRelojes();pintarKPI();pintarFiltro();pintarMapa(false);pintarPruebas();pintarEsc();pintarMetodo();pintarAlmada();todo.una=1}pintarClub();pintarSelector();pintarCadena();pintarCuanto();pintarFicha();pintarBanquillo();pintarContexto();pintarCancha(true);pintarBarraEt()}
+
+/* ---------- v2.1 · xShift y xRead ---------- */
+const XS_ALM=[['r7u:inicio_linea_3_5',-15],['r8:zonales',-1.3],['r8:def_area_360',-2.1],['r7c:altura_laterales',-3.8],['r8:pct_marca',4.5],
+  ['r8:pegados_portero',-0.02],['r4:intensidad_ppda',1.0],['r7c:libertad_posicional',-1.6],['r7u:cambio_familia_90',-0.13],['r8:envio_segundo_palo',-10]];
+const XS_U={'%':'pts','pts':'pts','jug.':'jug.','yd':'yd','por 90':'por 90','acciones por 100 pases rivales':''};
+const xsCap=s=>s?s[0].toUpperCase()+s.slice(1):s, xsNom=r=>xsCap(r.corto||r.nombre);
+function xsTxt(r,nat){const a=Math.abs(nat),d=a>=10?0:a<.2?2:1,u=XS_U[r.unidad]!=null?XS_U[r.unidad]:uTxt(r);return sg(nat,d)+(u?' '+u:'')}
+function xsDir(o){return o.r.pal?o.r.pal[o.z>=0?0:1]:(o.z>=0?'sube':'baja')}
+function xsEtapa(k){const e=E[k];if(!e||!e.previa||!e.antecesor||!e.cad)return null;const L=[];
+  for(const r of DATA.rasgos){if(r.dueno!=='V'||!r.legible)continue;const v=e.cad[r.id];if(!v||v.zt==null||v.zc==null)continue;
+    const z=v.zt-v.zc;L.push({id:r.id,r,z,nat:z*r.tau,xr:r.reloj,cob:(v.zn!=null&&Math.abs(z)>=.5)?(v.zn-v.zc)/z:null})}
+  return L.length?L.sort((a,b)=>Math.abs(b.z)-Math.abs(a.z)):null}
+function xsAlmada(){const A=DATA.almada,cb={};((A&&A.rasgos)||[]).forEach(x=>{cb[x.rasgo]=x.cob});
+  return XS_ALM.filter(([id])=>R[id]).map(([id,nat])=>{const r=R[id];return {id,r,z:nat/r.tau,nat,xr:r.reloj,cob:cb[id]!=null?cb[id]:null}}).sort((a,b)=>Math.abs(b.z)-Math.abs(a.z))}
+const XS_ET=Object.keys(E).filter(k=>xsEtapa(k)).sort((a,b)=>corto(E[a].tecnico).localeCompare(corto(E[b].tecnico),'es')||E[a].desde.localeCompare(E[b].desde));
+function xsMapa(L,n,etq){const W=640,H=330,ml=40,mr=14,mt=40,mb=40,X=45,ymax=Math.max(2.5,Math.min(4.6,d3.max(L,o=>Math.abs(o.z))*1.1));
+  const x=d3.scaleLinear([0,X],[ml,W-mr]).clamp(true),y=d3.scaleLinear([0,ymax],[H-mb,mt]).clamp(true);
+  let g=`<rect x="${ml}" y="${y(.5)}" width="${W-mr-ml}" height="${y(0)-y(.5)}" fill="var(--rule)" opacity=".6"/>
+   <text x="${ml+6}" y="${y(.5)+12}" font-size="9.5" fill="var(--ink-2)">jala poco: menos de media desviación</text>
+   <line x1="${x(17)}" x2="${x(17)}" y1="${mt-22}" y2="${H-mb}" stroke="var(--ink-3)" stroke-dasharray="3 3"/>
+   <text x="${ml+2}" y="${mt-26}" font-size="10.5" font-weight="700" fill="var(--ink)">Prepáralo desde el lunes</text>
+   <text x="${ml+2}" y="${mt-13}" font-size="9.5" fill="var(--ink-2)">se mide en un torneo o menos (17 partidos)</text>
+   <text x="${x(17)+6}" y="${mt-26}" font-size="10.5" font-weight="700" fill="var(--ink)">Decide el criterio</text>
+   <text x="${x(17)+6}" y="${mt-13}" font-size="9.5" fill="var(--ink-2)">los números tardan más de un torneo</text>`;
+  if(n){const xn=x(Math.min(n,X)),der=xn>W-150;g+=`<line x1="${xn}" x2="${xn}" y1="${mt-4}" y2="${H-mb}" stroke="var(--club-am)" stroke-width="1.6"/>
+   <text x="${xn+(der?-5:5)}" y="${H-mb-6}" text-anchor="${der?'end':'start'}" font-size="9.5" font-weight="700" fill="var(--club-am)">${etq||'esta etapa'}: ${n} partidos${n>X?' →':''}</text>`}
+  g+=[0,10,20,30,40].map(t=>`<text x="${x(t)}" y="${H-mb+14}" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">${t}</text>`).join('')
+   +d3.range(0,Math.floor(ymax)+1).map(t=>`<text x="${ml-6}" y="${y(t)+3}" text-anchor="end" font-size="9.5" fill="var(--ink-3)">${t}</text>`).join('')
+   +`<line x1="${ml}" x2="${W-mr}" y1="${y(0)}" y2="${y(0)}" stroke="var(--ink-3)"/>
+   <text x="${W-mr}" y="${H-6}" text-anchor="end" font-size="10" fill="var(--ink-2)">xRead: partidos para medirlo →</text>
+   <text x="11" y="${(mt+H-mb)/2}" font-size="10" fill="var(--ink-2)" transform="rotate(-90 11 ${(mt+H-mb)/2})" text-anchor="middle">jala más (xShift en desviaciones) →</text>`;
+  const pts=L.map(o=>({o,px:x(o.xr),py:y(Math.abs(o.z))})).sort((a,b)=>a.py-b.py);
+  const cajas=pts.map(p=>[p.px-6,p.py-6,12,12]).concat([[ml,mt-36,W-mr-ml,26],[ml+4,y(.5)+2,185,12]]);if(n){const xn=x(Math.min(n,X)),wl=150;cajas.push([xn>W-150?xn-wl-5:xn+3,H-mb-16,wl,12])}
+  for(const p of pts){const fuerte=Math.abs(p.o.z)>=.5,up=p.o.z>=0;
+    g+=`<path d="${up?`M${p.px},${p.py-5.5}L${p.px+5},${p.py+3.5}L${p.px-5},${p.py+3.5}Z`:`M${p.px},${p.py+5.5}L${p.px+5},${p.py-3.5}L${p.px-5},${p.py-3.5}Z`}" fill="${fuerte?'var(--club-am)':'var(--ghost)'}"><title>${xsNom(p.o.r)}: xShift ${xsTxt(p.o.r,p.o.nat)} (${xsDir(p.o)}), xRead ${p.o.xr}</title></path>`}
+  for(const p of pts){if(Math.abs(p.o.z)<.5)continue;const t=`${xsNom(p.o.r)} ${xsTxt(p.o.r,p.o.nat)}`,w=t.length*5.15+4;
+    const pref=p.px+w+9>W-mr?-1:1;let hecho=false;
+    for(const lado of [pref,-pref]){if(hecho)break;for(const dy of [0,-11,11,-22,22,-33,33]){const lx=lado>0?p.px+8:p.px-8-w,by=p.py+3.5+dy;const bx=[lx,by-9,w,11];
+      if(lx<ml||lx+w>W-mr||by>H-mb-2)continue;
+      if(cajas.some(c=>bx[0]<c[0]+c[2]&&bx[0]+bx[2]>c[0]&&bx[1]<c[1]+c[3]&&bx[1]+bx[3]>c[1]))continue;
+      cajas.push(bx);hecho=true;
+      g+=`${dy?`<line x1="${p.px+(lado>0?4:-4)}" y1="${p.py}" x2="${lado>0?lx-1:lx+w+1}" y2="${by-3}" stroke="var(--ink-3)" stroke-width=".6"/>`:''}<text x="${lado>0?lx:lx+w}" y="${by}" text-anchor="${lado>0?'start':'end'}" font-size="10" fill="var(--ink)" font-weight="600">${t}</text>`;break}}}
+  return `<svg class="xs-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Rasgos que viajan con el técnico según cuánto jalan (xShift) y desde qué partido se miden (xRead)">${g}</svg>
+   <p class="chico gris">Triángulo hacia arriba: el técnico sube ese rasgo frente al club; hacia abajo: lo baja. En gris y sin etiqueta, los que jalan poco (están en la tabla). Pasa el cursor sobre un triángulo para ver el detalle.</p>`}
+function xsTabla(L,n,cob,max){const F=(max?L.filter(o=>Math.abs(o.z)>=.5).slice(0,max):L);
+  const cab=`<div class="xs-f cab"><span>Rasgo que viaja con el técnico</span><span>xShift</span><span>xRead</span>${cob?'<span>Recorrido</span>':''}</div>`;
+  return `<div class="xs-t">${cab}${F.map(o=>`<div class="xs-f${Math.abs(o.z)<.5?' poco':''}"><span>${xsNom(o.r)}<small>${Math.abs(o.z)<.5?'jala poco':xsCap(xsDir(o))}</small></span><span class="xs-v">${xsTxt(o.r,o.nat)}</span><span>${o.xr} partidos${n?(n>=o.xr?'<small class="xs-ok">ya se mide</small>':'<small class="xs-no">todavía no</small>'):''}</span>${cob?`<span>${o.cob==null?'<small>—</small>':pctR(o.cob)}</span>`:''}</div>`).join('')}</div>`}
+function xsPlantel(){const P=DATA.rasgos.filter(r=>r.dueno==='P'&&r.legible).sort((a,b)=>a.reloj-b.reloj);
+  return `<p class="xs-pl"><b>Del plantel: explótalo o cúbrelo.</b> <span class="gris">No viajan con el técnico (xShift ≈ 0): los mueve quién juega. Con su xRead:</span> ${P.map(r=>`<span class="chip">${xsNom(r)} <i>${r.reloj}</i></span>`).join('')}</p>`}
+function xsVentana(e){const p=e.ant_part||0,ini=e.desde<'2022-07';return {n:ini?Math.min(18,p):18,p,solo:ini||p>=18,ini,int:e.ant_rol==='interino'}}
+const xsDe=e=>xsVentana(e).solo?`de ${corto(e.antecesor)}`:'antes de su llegada';
+const xsCon=e=>xsVentana(e).solo?`con ${corto(e.antecesor)}`:'antes de su llegada';
+function xsVentTxt(e){const v=xsVentana(e),a=corto(e.antecesor);
+  return v.solo?`Sus últimos ${v.n} partidos antes de la llegada, todos con ${a}${v.ini?' (los datos empiezan en el Apertura 2021)':''}`
+    :`Sus últimos 18 partidos antes de la llegada: ${v.p} con ${a}${v.int?' (interino)':''} y ${18-v.p} con el técnico anterior a él`}
+const XS_MES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+const xsPer=v=>v&&v.desde?(v.desde.slice(0,4)===v.hasta.slice(0,4)?v.desde.slice(0,4):`${v.desde.slice(0,4)} a ${v.hasta.slice(0,4)}`):'';
+const xsMes=f=>f?`${XS_MES[+f.slice(5,7)-1]} de ${f.slice(0,4)}`:'';
+function xsQuien(k){if(k==='alm'){const a=E['Pachuca · 2'];return {tec:'Guillermo Almada',club:'América',per:'Apertura 2026',n:11,
+    t:{club:'Pachuca',per:xsPer(a),n:a.partidos},c:{tit:'El América de André Jardine',det:'Sus últimos 18 partidos antes de la llegada, todos con Jardine (hasta mayo de 2026)'}}}
+  const e=E[k],p=E[e.previa]||{};return {tec:corto(e.tecnico),club:e.club,per:xsPer(e),n:e.partidos,
+    t:{club:clubDe(e.previa),per:xsPer(p),n:p.partidos},c:{tit:`El ${e.club} ${xsDe(e)}`,det:`${xsVentTxt(e)} (hasta ${xsMes(e.desde)})`}}}
+function pintarXM(){const el=document.getElementById('xmetricas');if(!el)return;
+  const ops=[['alm','Guillermo Almada · América (prueba en vivo, 2026)'],...XS_ET.map(k=>[k,`${corto(E[k].tecnico)} · ${E[k].club} (${xsPer(E[k])})`])];
+  el.innerHTML=`<span class="eyebrow">Dos métricas nuevas</span>
+   <div class="xm-grid">
+    <div class="xm-card"><h3>xShift</h3><p>Hacia dónde y cuánto jala un técnico al equipo, rasgo por rasgo: la brecha entre su equipo anterior y el club, en lo que viaja con él.</p>
+     <span class="uso">Sirve antes de contratar, para preparar al rival que cambia de técnico y para evaluar al técnico actual: cuánto de esa brecha ya recorrió el equipo.</span></div>
+    <div class="xm-card"><h3>xRead</h3><p>Desde qué partido se puede medir con confianza cada rasgo. Antes, los números no separan la idea del técnico del azar de cada partido.</p>
+     <span class="uso">Sirve para saber qué ya se puede evaluar, de un técnico propio o de un rival, y qué todavía no.</span></div>
+    <div class="xm-cmp"><label class="chico"><b>Elige una llegada de técnico</b><select class="sel-et" id="xm-sel">${ops.map(([k,t])=>`<option value="${k}">${t}</option>`).join('')}</select></label>
+     <div id="xm-quien"></div></div>
+    <div class="xm-rap"><h4 id="xm-tit"></h4><div id="xm-lista"></div><button type="button" class="ver-btn" id="xm-ir">Ver su ficha completa →</button></div>
+   </div>`;
+  const sel=document.getElementById('xm-sel');
+  const pinta=()=>{const k=sel.value,L=k==='alm'?xsAlmada():xsEtapa(k),m=L.filter(o=>Math.abs(o.z)>=.5).length,q=xsQuien(k);
+    document.getElementById('xm-quien').innerHTML=`<div class="xm-quien">${q.tec} llega al ${q.club}<small>Etapa que se evalúa: ${q.club}, ${q.per}, ${q.n} partidos</small></div>
+     <div class="xm-par">
+      <div class="xm-caja t"><span class="et">Lo que trae</span><b>Su ${q.t.club}</b><span>Su etapa anterior: ${q.t.per}, ${q.t.n} partidos</span></div>
+      <div class="xm-menos"><b>−</b>xShift = lo que trae menos lo que encuentra</div>
+      <div class="xm-caja"><span class="et">Lo que encuentra</span><b>${q.c.tit}</b><span>${q.c.det}</span></div>
+     </div>
+     <p class="xm-sig"><span class="fd">→</span><span class="fm">↓</span> <span>El resultado, rasgo por rasgo, está en la tabla <span class="td">de la derecha</span><span class="tm">de abajo</span>: cuánto jala en cada rasgo (xShift) y desde qué partido se puede medir (xRead). Solo cuentan los rasgos que viajan con el técnico.</span></p>`;
+    document.getElementById('xm-tit').textContent=`Resultado: lo que más jala ${q.tec} al ${q.club}`;
+    document.getElementById('xm-lista').innerHTML=xsTabla(L,0,false,6)+`<p class="chico gris" style="margin-top:6px">${m>6?`Los 6 que más jalan, de ${m} con al menos media desviación.`:`${m} de ${L.length} rasgos jalan al menos media desviación.`}</p>`;
+    document.getElementById('xm-ir').textContent=k==='alm'?'Ver la prueba en vivo →':'Ver su ficha completa →'};
+  sel.onchange=pinta;pinta();
+  document.getElementById('xm-ir').onclick=()=>{const k=sel.value;if(k==='alm'){document.getElementById('alm-xs').scrollIntoView({behavior:'smooth',block:'start'});return}
+    irRetrato({grupo:E[k].grupo,etapa:k,capa:'sin',ir:'#xs-d'})}}
+function pintarXS(){const T=document.getElementById('xs');if(!T)return;const e=E[st.etapa],L=xsEtapa(st.etapa),prev=e.previa?clubDe(e.previa):null;
+  document.getElementById('xs-s').textContent=L?`xShift y xRead: qué jala ${corto(e.tecnico)} desde su ${prev}`:'xShift y xRead de esta etapa';
+  if(!L){T.innerHTML=`<p class="chico gris">${!e.previa?'Sin una etapa previa de 15 partidos o más dentro de la liga, no hay contra qué medir la brecha: esta etapa no tiene xShift (se resolvería con más ligas).':'No hay partidos del club antes de su llegada dentro de los datos: esta etapa no tiene xShift.'} El xRead de cada rasgo sí aplica: está junto a cada rasgo de la ficha.</p>`;return}
+  T.innerHTML=`<p class="chico gris">xShift: la brecha entre su ${prev} y el ${e.club} ${xsDe(e)} en los ${L.length} rasgos que viajan con el técnico. Lo que encuentra: ${xsVentTxt(e).replace(/^Sus/,'sus')}. xRead: partidos para medir cada uno. Recorrido: cuánto de esa brecha cubrió el equipo en esta etapa (solo donde la brecha es de media desviación o más).</p>
+   ${xsMapa(L,e.partidos)}${xsTabla(L,e.partidos,true)}${xsPlantel()}`}
+function pintarAlmXS(){const el=document.getElementById('alm-xs');if(!el)return;const L=xsAlmada();
+  el.innerHTML=`<h3>El mapa de Almada en el América: xShift y xRead</h3>
+   <p class="chico gris">Hacia dónde y cuánto jala Almada al América (su Pachuca frente a los últimos 18 partidos con Jardine) y desde qué partido se puede medir cada rasgo. La línea de color marca los 11 partidos evaluados. Cálculo con la versión de la prueba en vivo, que suma el Apertura 2026.</p>
+   ${xsMapa(L,11,'evaluados')}${xsTabla(L,11,true)}
+   <p class="chico gris">Son los 10 rasgos que viajan con el técnico dentro de la herramienta congelada en el preregistro. Los otros 5 (organización defensiva 360 y huella defensiva por rol) se sumaron después y no tienen xShift de Almada. El recorrido solo se evaluó en los dos rasgos de la predicción P2.</p>
+   ${xsPlantel()}`}
+
+function todo(){if(!todo.una){pintarXM();pintarAlmXS();pintarHistoria();pintarResumen();pintarRelojes();pintarKPI();pintarFiltro();pintarMapa(false);pintarPruebas();pintarEsc();pintarMetodo();pintarAlmada();todo.una=1}pintarClub();pintarSelector();pintarCadena();pintarXS();pintarCuanto();pintarFicha();pintarBanquillo();pintarContexto();pintarCancha(true);pintarBarraEt()}
 document.getElementById('ficha').addEventListener('click',ev=>{const b=ev.target.closest('button.ver');if(!b)return;const a=ANIM[b.dataset.anim];
   if(st.anim&&a.capa&&a.capa!==st.capa){st.capa=a.capa;document.querySelectorAll('#capa button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===st.capa));pintarCancha(true)}});
 todo();
